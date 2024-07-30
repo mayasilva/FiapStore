@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    public class AplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         private readonly string _connectionString;
 
-        public AplicationDbContext(string connectionString)
+        public ApplicationDbContext(string connectionString)
         {
             _connectionString = connectionString;
         }
@@ -31,7 +31,7 @@ namespace Infrastructure.Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AplicationDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
     }
 }
