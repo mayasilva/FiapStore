@@ -15,7 +15,9 @@ namespace Infrastructure.Repository.Configuration
             builder.Property(p => p.DataCriacao).HasColumnType("DATETIME").IsRequired();
             builder.Property(p => p.Nome).HasColumnType("VARCHAR(100)").IsRequired();
             builder.Property(p => p.DataDeNascimento).HasColumnType("DATETIME");
-            
+            builder.Property(p => p.CPF).HasColumnType("VARCHAR(11)").IsRequired();
+
+
         }
     }
 }

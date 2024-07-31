@@ -10,6 +10,7 @@ namespace Core.Entity
         [Column("Nome")]
         public required string Nome { get; set; }
         public DateTime? DataDeNascimento { get; set; }
+        public required string CPF { get; set; }
         public ICollection<Pedido> Pedidos { get; set; }
     }
 }
